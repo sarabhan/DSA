@@ -2,20 +2,19 @@
 using namespace std;
 int main()
 {
-    int a; cin>>a;
-    for (int i=0; i<a*a; i++)
+    int n; cin>>n;
+    for (int i=0; i<=2*n-2; i++)
     {
-        if (i<(a*a)/2)
+        if (i<n)
         {
-            for(int j=0; j<i+1; j++)
+            for(int j=0; j<=i; j++)
             {
-                cout<<"*"<<endl;
-                cout<<i<<","<<j;
+                cout<<"*";
             }
         }
         else
         {
-            for(int j=i+1; j>0; j--)
+            for(int j=0; j<=(2*n)-2-i; j++)
             {
                 cout<<"*";
             }
