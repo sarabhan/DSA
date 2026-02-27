@@ -5,9 +5,9 @@ int main()
     int n; cin>>n;
     for(int i=0; i<2*n; i++)
     {
-        if(i<n)
+        if(i<n) // happens n/2 times
         {
-            for(int j=0; j<=n-1-i; j++)
+            for(int j=0; j<=n-1-i; j++) //total 3n/2
             {
                 cout<<"*";
             }
@@ -20,9 +20,9 @@ int main()
                 cout<<"*";
             }
         }
-        else
+        else // n/2
         {
-            for(int j=0; j<=i-n; j++)
+            for(int j=0; j<=i-n; j++) //3n/2
             {
                 cout<<"*";
             }
