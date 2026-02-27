@@ -26,11 +26,11 @@ int main()
             {
                 cout<<"*";
             }
-            for(int j=i-n+1; j<2*n-i+n-1; j++)
+            for(int j=i-n+1; j<3*n-i-1; j++)
             {
                 cout<<" ";
             }
-            for(int j=2*n-i+n-1; j<2*n; j++)
+            for(int j=3*n-i-1; j<2*n; j++)
             {
                 cout<<"*";
             }
