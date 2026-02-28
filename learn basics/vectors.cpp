@@ -21,10 +21,12 @@ vector<int> hehe; //this allows vector to be dynamic
 vector<int> huha(10);
  
 vector<int> huehue(10,3); //currently, all elements will be '3'
+vector <int> copy_of_huehue(huehue); //creates copy of another vector
 
 vector<int> v = {1,2,3}; //defined a complete vector
 
 huha.push_back(2); //add element at last
+huha.emplace_back(3); //faster than push back
 huha.pop_back(); //remove last ele
 
 cout<< "here is the size & capacity of vector"<<endl;
