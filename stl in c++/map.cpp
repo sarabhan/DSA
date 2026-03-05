@@ -10,7 +10,7 @@ int main()
         cout<<i->first.first<<" "<<i->first.second<<endl;
         cout<<(*i).second<<endl;
     }
-
+    
     //OR MUCH EASIER WAY IS 
     for(auto i:mp)
     {
