@@ -57,7 +57,7 @@ int main()
     }
     //FOR MAX CONTROL
     cout<<"here is eles of vector using iterators"<<endl;
-    for(vector<int>::iterator i = v.begin(); i!=v.end(); i++)
+    for(auto i = v.begin(); i!=v.end(); i++)
     {
         cout<<*(i)<<endl;
     }
