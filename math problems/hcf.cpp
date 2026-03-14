@@ -20,7 +20,7 @@ int main()
 
     //     }
     // }
-    //a better option is using euclidean al.go
+    //a better option is using euclidean algorithm
     while(a>0 && b>0)
     {
         if(a>b)
