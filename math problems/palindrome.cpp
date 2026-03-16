@@ -12,7 +12,7 @@ int main()
         n=n/10;
         base=(base*10)+digit;
     }
-    if(alt32123se)
+    if(alt==base)
     {
         cout<<"yes pali";
     }
