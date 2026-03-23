@@ -1,18 +1,16 @@
 #include<iostream>
 using namespace std;
-int fun(int sum, int n)
+int fun(int n)
 {
-    sum=sum+n;
-    n--;
-    if(n==0)
-        return sum;
-    fun(sum,n);
+    if(n==1)
+        return 1;
+    return (n+fun(n-1));
 }
 int main()
 {
     int n,sum=0, total;
     cin>>n;
-    total = fun(sum,n);
+    total = fun(n);
     cout<<total;
     return 0;
 }

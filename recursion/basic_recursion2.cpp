@@ -5,8 +5,8 @@ void fun(int count)
     cout<<count<<" don"<<endl;
     if(count==1)
         return;
-    count--;
-    fun(count);
+    // count--;
+    return fun(count-1);
 }
 int main()
 {

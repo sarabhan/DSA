@@ -6,8 +6,8 @@ void fun(int count, int n)
     cout<<count<<" don"<<endl;
     if(count==n)
         return;
-    count++;
-    fun(count,n);
+    // count++;
+    return fun(count+1,n);
     // if(count==10)
     //     return;
 }
