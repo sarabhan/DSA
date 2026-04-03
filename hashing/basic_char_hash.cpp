@@ -10,10 +10,11 @@ int main()
         hashmap[(s[i]-'a')]++;
     }
     int queries; cin>>queries;
-    char a;
+    
     for(int i=0; i<queries; i++)
     {
+        char a;
         cin>>a;
-        cout<<hashmap[a]<<endl;
+        cout<<hashmap[a - 'a']<<endl;
     }
 }
