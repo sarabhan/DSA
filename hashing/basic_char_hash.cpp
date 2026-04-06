@@ -4,10 +4,11 @@ using namespace std;
 int main()
 {
     string s; cin>>s;
-    vector<int> hashmap(26,0);
-    for(int i=0; i<s.length(); i++)
+    vector<int> hashmap(256,0);
+    int len = s.length();
+    for(int i=0; i<len; i++)
     {
-        hashmap[(s[i]-'a')]++;
+        hashmap[(s[i])]++;
     }
     int queries; cin>>queries;
     
@@ -15,6 +16,6 @@ int main()
     {
         char a;
         cin>>a;
-        cout<<hashmap[a - 'a']<<endl;
+        cout<<hashmap[a]<<endl;
     }
 }
