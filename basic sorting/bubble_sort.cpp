@@ -5,6 +5,7 @@ void bubble_sort(vector<int> &v, int size)
 {
     for(int i=0; i<size-1; i++)
     {
+        bool swapped = false;
         for(int j=0; j<size-i-1; j++)
         {
             //can use stl too
@@ -14,9 +15,11 @@ void bubble_sort(vector<int> &v, int size)
                 temp = v[j];
                 v[j] = v[j+1];
                 v[j+1] = temp;
+                swapped=true;
                 
             }
         }
+        if(!swapped) break; //stop early if sorted
     }
 }
 
