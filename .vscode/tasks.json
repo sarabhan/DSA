@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: cl.exe build active file",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/FS",
+                "/nologo",
+
+                "/Fo${workspaceFolder}\\build\\${fileBasenameNoExtension}.obj",
+                "/Fd${workspaceFolder}\\build\\${fileBasenameNoExtension}.pdb",
+                "/Fe${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+
+                "${file}"
+            ],
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "problemMatcher": ["$msCompile"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build active C++ file with MSVC (all outputs in build/)"
+        }
+    ]
+}
