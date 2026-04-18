@@ -11,7 +11,7 @@ int main()
         { 
             cout<<"not a prime"; 
             break; 
-        }7
+        }
     } 
     if(rem!=0) cout<<"yes a prime"; 
     return 0; 
