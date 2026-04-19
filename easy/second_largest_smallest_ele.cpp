@@ -23,8 +23,8 @@ pair<int,int> second_large_n_smallest(vector<int> &v)
     //INT_MAX → largest possible int = 2147483647   (2^31 - 1)
     //INT_MIN → smallest possible int = -2147483648  (-2^31)
     // these are already pre-defined in c++
-    int largest = INT_MIN, secondLargest = INT_MIN;
-    int smallest = INT_MAX, secondSmallest = INT_MAX;
+    int largest ,secondLargest = INT_MIN;
+    int smallest ,secondSmallest = INT_MAX;
 
     for(int x : v)
     {
