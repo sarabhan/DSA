@@ -4,10 +4,22 @@
 using namespace std;
 void sort_vector(vector<int> &v, int size)
 {
-    // 0 to low-1 for 0s
-    // low to mid-1 for 1s
-    // mid to size-1 for 2s
-    
+    int low=0, mid=0, high = size-1;
+    while(mid<=high)
+    {
+        if(v[mid]==0)
+        {
+            swap(v[low],v[mid]);
+            low++; mid++;
+        }
+        else if (v[mid]==1)
+            mid++;
+        else // if v[mid]==2
+        {
+            swap(v[mid], v[high]);
+            high--;
+        }
+    }    
 }
 int main()
 {
