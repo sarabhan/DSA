@@ -68,5 +68,5 @@ int find_majority(vector<int> &v)
 int main()
 {
     vector<int> v = {7, 0, 0, 1, 7, 7, 2, 7, 7};//{1,1,2,3,4,5,6,7};
-    cout<<find_majority(v,v.size()); 
+    cout<<find_majority(v); 
 }
