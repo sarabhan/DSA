@@ -22,6 +22,8 @@ void rotate(vector<int> &v, int k, string direction)
         reverse(v.begin()+k,v.end());
         //reverse whole vect
         reverse(v.begin(),v.end());
+        // to reverse the first half of array before pivot point
+        reverse(v.begin(), v.end());
 
     }
 }
@@ -31,8 +33,10 @@ int main()
     int k = 3;
     string direction = "left";
     rotate(v,k,direction);
+ 
     for(auto i:v)
     {
         cout<<i<<",";
     }
 }
+
