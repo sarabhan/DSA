@@ -38,5 +38,13 @@ vector<vector<int>> trio_sum(vector<int> &v, int size)
 int main()
 {
     vector<int> v = {-1,0,1,2,-1,-4};
-    c=  
+    vector<vector<int>> result = trio_sum(v,v.size());
+    for(auto i:result)
+    {
+        for(auto j:i)
+        {
+            cout <<j<<" ";
+        }
+        cout<<endl;
+    }
 }
