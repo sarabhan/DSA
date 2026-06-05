@@ -1,14 +1,28 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<map>
 using namespace std;
 int longest_with_sum_0(vector<int> &v, int size)
 {
-    int p1=v[0], i=0;
-    while(i<size)
+    int sum=0, maxlen=0;
+    map<int,int> m; 
+    for(int i=0; i<size; i++)
     {
-        int sum = sum+v[i]; 
+        sum = v[i]+sum;
+        if(sum==0)
+            maxlen = max(maxlen, i+1);
+        else
+        {
+            if (m.find(sum) != m.end()) 
+                maxlen = max(maxlen, i-m[sum]);
+            else
+            {
+                m[sum] = i;
+            }
+        }
     }
+    return maxlen;
 }
 int main()
 {
