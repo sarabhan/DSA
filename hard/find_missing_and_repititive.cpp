@@ -3,31 +3,40 @@
 #include<algorithm>
 #include<cmath>
 using namespace std;
-vector<int> finding(vector<int> &v, int size)
+vector<int> finding(vector<int> &v, long long size)
 {
-    vector<int> final;
-    int count=0, breakpoint1=0, breakpoint2=0, sum=0;
-    int realsum = ((size+1)*size/2);
-    for(int i=1; i<size; i++)
-    {
-        sum = sum+v[i];
-        if(v[i-1]<v[i] && abs(v[i-1]-v[i])!=1)
+        // Sum of first n natural numbers
+        long long sum = (size * (size + 1)) / 2;
+        
+        // Sum of squares of first n natural numbers
+        long long squaresum = (size * (size + 1) * (2 * size + 1)) / 6;
+
+        /*Calculate actual sum (S) and sum 
+        of squares (S2) of array elements*/
+        long long real_sum = 0, real_squaresum = 0;
+        for (int i = 0; i < size; i++) 
         {
-            if(v[i-1]!=breakpoint1 && v[i-1]!=breakpoint2)
-                breakpoint1 = v[i-1];
+            real_sum += v[i];
+            real_squaresum += (int)v[i] * (int)v[i];
         }
-        if((v[i-1]>v[i]) && abs(v[i-1]-v[i])!=1)
-        {
-            if(v[i]!=breakpoint2 && v[i]!=breakpoint1)
-                breakpoint2 = v[i];
-        }
-    }
-    sum = sum+v[0];
-    int missing = (breakpoint1 + breakpoint2)/2;
-    int rep = sum-realsum+missing;
-    final.emplace_back(missing);
-    final.emplace_back(rep);
-    return final;
+
+        //Compute the difference values
+        long long val1 = real_sum - sum; 
+        
+        // S2 - S2n = X^2 - Y^2
+        long long val2 = real_squaresum - squaresum; 
+
+        //Calculate X + Y using X + Y = (X^2 - Y^2) / (X - Y)
+        val2 = val2 / val1;
+
+        /* Calculate X and Y from X + Y and X - Y
+         X = ((X + Y) + (X - Y)) / 2
+         Y = X - (X - Y)*/
+        long long x = (val1 + val2) / 2;
+        long long y = x - val1;
+
+        // Return the results as {repeating, missing}
+        return {(int)x, (int)y};
 }
 int main()
 {
