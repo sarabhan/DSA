@@ -30,6 +30,6 @@ int search(vector<int> &v, int size, int low, int high, int num)
 int main() 
 {
     vector<int> v = {4, 5, 6, 7, 0, 1, 2};
-    cout<<search(v, v.size(),0,v.size()-1, 0);
+    cout<<search(v, v.size(),0,v.size()-1, 3);
     return 0;   
 }
