@@ -35,7 +35,7 @@ public:
  
 // Driver code starts
 int main() {
-    vector<int> nums = {1, 7, 1, 3, 5, 6, 4};
+    vector<int> nums = {1, 7, 2, 1, 3, 5, 6, 4};
  
     Solution obj;
     cout << obj.findPeakElement(nums) << endl;
